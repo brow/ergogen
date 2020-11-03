@@ -3,9 +3,13 @@ points:
     matrix:
       rows:
         thumb:
+          bind: 10
         bottom:
+          bind: 10
         home:
+          bind: 10
         top:
+          bind: 10
       columns:
         pinky:
           rows:
@@ -35,3 +39,30 @@ points:
   mirror:
     ref: matrix_inner_top
     distance: 36
+outlines:
+  glue:
+    default:
+      top:
+        left:
+          ref: matrix_inner_top
+        right:
+          ref: mirror_matrix_inner_top
+      bottom:
+        left:
+          ref: matrix_innerer_thumb
+        right:
+          ref: mirror_matrix_innerer_thumb
+  exports:
+    plate:
+      plate_outline:
+        operation: add
+        type: keys
+        side: both
+      switch_holes:
+        operation: subtract
+        type: keys
+        side: both
+        size: [15.5, 12.8] # ALPS
+        bound: false
+
+        # glue: default
