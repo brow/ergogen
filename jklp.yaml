@@ -3,37 +3,30 @@ points:
     matrix:
       columns:
         pinky:
-          row_overrides:
+          rows:
             bottom:
               shift: [9.5, 0]
-            home:
-            top:
         ring:
           stagger: 19
-          row_overrides:
-            bottom:
-            home:
-            top:
         middle:
           stagger: 10
-          row_overrides:
-            bottom:
-            home:
-            top:
         index:
           stagger: -26
+          rows:
+            thumb:
         inner:
           stagger: -7
+          rows:
+            thumb:
         innerer:
           stagger: -7
           row_overrides:
             thumb:
       rows:
-        thumb:
         bottom:
         home:
         top:
   rotate: -20
   mirror:
-    ref: matrix_inner_home
+    ref: matrix_inner_top
     distance: 48
