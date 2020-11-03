@@ -1,32 +1,37 @@
 points:
   zones:
     matrix:
+      rows:
+        thumb:
+        bottom:
+        home:
+        top:
       columns:
         pinky:
           rows:
             bottom:
               shift: [9.5, 0]
+            thumb:
+              skip: true
         ring:
           stagger: 19
+          rows:
+            thumb:
+              skip: true
         middle:
           stagger: 10
-        index:
-          stagger: -26
           rows:
             thumb:
+              skip: true
+        index:
+          stagger: -7
         inner:
           stagger: -7
-          rows:
-            thumb:
         innerer:
           stagger: -7
           row_overrides:
             thumb:
-      rows:
-        bottom:
-        home:
-        top:
   rotate: -20
   mirror:
     ref: matrix_inner_top
-    distance: 48
+    distance: 36
