@@ -1,55 +1,61 @@
 points:
+  key:
+    bind: 10
   zones:
-    matrix:
-      key:
-        bind: 10
+    fingers:
       rows:
-        thumb:
         bottom:
         home:
         top:
       columns:
+        outer:
+          rows:
+            top:
+              skip: true
+            bottom:
+              skip: true
         pinky:
           rows:
             bottom:
-              shift: [9.5, 0]
-            thumb:
               skip: true
         ring:
           stagger: 19
-          rows:
-            thumb:
-              skip: true
         middle:
           stagger: 10
-          rows:
-            thumb:
-              skip: true
         index:
           stagger: -7
         inner:
           stagger: -7
-        innerer:
-          stagger: -7
-          row_overrides:
-            thumb:
+    thumb:
+      anchor:
+        ref: fingers_inner_bottom
+        shift: [-9.5, -19]
+      rows:
+        main:
+      columns:
+        outer:
+        center:
+        inner:
+          rows:
+            main:
+              shift: [0, -9.5]
   rotate: -20
   mirror:
-    ref: matrix_inner_top
-    distance: 36
+    ref: fingers_inner_top
+    distance: 34
 outlines:
   glue:
     default:
       top:
         left:
-          ref: matrix_inner_top
+          ref: fingers_inner_top
         right:
-          ref: mirror_matrix_inner_top
+          ref: mirror_fingers_inner_top
       bottom:
         left:
-          ref: matrix_innerer_thumb
+          ref: thumb_inner_main
         right:
-          ref: mirror_matrix_innerer_thumb
+          ref: mirror_thumb_inner_main
   exports:
     plate:
       plate_outline:
@@ -62,5 +68,3 @@ outlines:
         side: both
         size: [15.5, 12.8] # ALPS
         bound: false
-
-        # glue: default
