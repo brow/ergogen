@@ -1,15 +1,13 @@
 points:
   zones:
     matrix:
+      key:
+        bind: 10
       rows:
         thumb:
-          bind: 10
         bottom:
-          bind: 10
         home:
-          bind: 10
         top:
-          bind: 10
       columns:
         pinky:
           rows:
