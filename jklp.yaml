@@ -39,10 +39,10 @@ points:
           rows:
             main:
               shift: [0, -9.5]
-  rotate: -20
+  rotate: -21
   mirror:
     ref: fingers_inner_top
-    distance: 34
+    distance: 31
 outlines:
   glue:
     default:
