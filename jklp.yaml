@@ -64,6 +64,9 @@ outlines:
           ref: mirror_thumb_inner_main
           relative: false
           shift: [10, 10]
+      waypoints:
+        - percent: 82
+          width: 35
   exports:
     mockup:
       plate_outline:
