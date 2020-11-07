@@ -57,14 +57,14 @@ outlines:
         right:
           ref: mirror_thumb_inner_main
   exports:
-    plate:
+    mockup:
       plate_outline:
         operation: add
         type: keys
         side: both
       switch_holes:
-        operation: subtract
+        operation: stack
         type: keys
         side: both
-        size: [15.5, 12.8] # ALPS
+        size: [18, 18]
         bound: false
