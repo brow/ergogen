@@ -51,10 +51,12 @@ outlines:
           ref: fingers_inner_top
           relative: false
           shift: [10, 10]
+          rotate: 25
         right:
           ref: mirror_fingers_inner_top
           relative: false
           shift: [10, 10]
+          rotate: -25
       bottom:
         left:
           ref: thumb_inner_main
