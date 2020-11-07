@@ -15,21 +15,21 @@ points:
             bottom:
               skip: true
         pinky:
+          stagger: -5
           rows:
             bottom:
               skip: true
         ring:
-          stagger: 19
+          stagger: 22
         middle:
-          stagger: 10
+          stagger: 7
         index:
           stagger: -7
         inner:
-          stagger: -7
     thumb:
       anchor:
         ref: fingers_inner_bottom
-        shift: [-9.5, -19]
+        shift: [0, -19]
       rows:
         main:
       columns:
@@ -38,11 +38,11 @@ points:
         inner:
           rows:
             main:
-              shift: [0, -9.5]
-  rotate: -21
+              shift: [-8, -19]
+  rotate: -25
   mirror:
     ref: fingers_inner_top
-    distance: 31
+    distance: 30
 outlines:
   glue:
     default:
