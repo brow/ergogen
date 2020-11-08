@@ -2,7 +2,7 @@ points:
   key:
     bind: 1
   zones:
-    fingers:
+    matrix:
       rows:
         bottom:
         home:
@@ -19,42 +19,42 @@ points:
         index:
           stagger: -7
         inner:
-    thumb:
+    thumbfan:
       anchor:
-        ref: fingers_inner_bottom
+        ref: matrix_inner_bottom
         shift: [0, -19]
       rows:
-        main:
+        thumb:
       columns:
-        outer:
-        center:
-        inner:
+        far:
+        home:
+        near:
           rows:
-            main:
+            thumb:
               shift: [-8, -19]
   rotate: -25
   mirror:
-    ref: fingers_inner_top
+    ref: matrix_inner_top
     distance: 30
 outlines:
   glue:
     default:
       top:
         left:
-          ref: fingers_inner_top
+          ref: matrix_inner_top
           relative: false
           shift: [10, 10]
         right:
-          ref: mirror_fingers_inner_top
+          ref: mirror_matrix_inner_top
           relative: false
           shift: [10, 10]
       bottom:
         left:
-          ref: thumb_inner_main
+          ref: thumbfan_near_thumb
           relative: false
           shift: [10, 10]
         right:
-          ref: mirror_thumb_inner_main
+          ref: mirror_thumbfan_near_thumb
           relative: false
           shift: [10, 10]
       waypoints:
