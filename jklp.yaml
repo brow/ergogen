@@ -8,17 +8,10 @@ points:
         home:
         top:
       columns:
-        outer:
-          rows:
-            top:
-              skip: true
-            bottom:
-              skip: true
         pinky:
-          stagger: -5
           rows:
             bottom:
-              skip: true
+              shift: [-19, 24]
         ring:
           stagger: 22
         middle:
