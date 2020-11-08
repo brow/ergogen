@@ -61,14 +61,14 @@ outlines:
         - percent: 82
           width: 35
   exports:
-    _pcb_outline:
+    _pcb_edge:
       - type: keys
         side: both
         size: [18, 18]
     mockup:
       - operation: add
         type: outline
-        name: _pcb_outline
+        name: _pcb_edge
       - operation: stack
         type: keys
         side: both
@@ -78,4 +78,12 @@ pcbs:
   main:
     outlines:
       main:
-        outline: _pcb_outline
+        outline: _pcb_edge
+    footprints:
+      mcu:
+        type: promicro
+        anchor:
+          ref:
+            - matrix_inner_bottom
+            - mirror_matrix_inner_bottom
+          rotate: 270
