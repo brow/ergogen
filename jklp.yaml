@@ -3,35 +3,92 @@ points:
     bind: 1
   zones:
     matrix:
-      rows:
-        bottom:
-        home:
-        top:
       columns:
         pinky:
           rows:
             bottom:
               shift: [-19, 24]
+          key:
+            column_net: P4
+            column_mark: P
         ring:
           stagger: 22
+          key:
+            column_net: P5
+            column_mark: R
         middle:
           stagger: 7
+          key:
+            column_net: P7
+            column_mark: M
         index:
           stagger: -7
+          key:
+            column_net: P8
+            column_mark: X
         inner:
+          key:
+            column_net: P1
+            column_mark: I
+      rows:
+        bottom:
+          row_net: P16
+          row_mark: LB
+          mirror:
+            row_net: P9
+            row_mark: RB
+        home:
+          row_net: P15
+          row_mark: LH
+          mirror:
+            row_net: P6
+            row_mark: RH
+        top:
+          row_net: P20
+          row_mark: LT
+          mirror:
+            row_net: P2
+            row_mark: RT
+    switch_footprints:
+      extends: matrix
+      key:
+        footprints: &quad
+          mx:
+            type: mx
+            nets:
+              from: '!colrow'
+              to: '!column_net'
+        mirror:
+          footprints: &quad_mirror
+            mx:
+              nets:
+                from: '!column_net'
+                to: '!colrow'
     thumbfan:
       anchor:
         ref: matrix_inner_bottom
         shift: [0, -19]
-      rows:
-        thumb:
       columns:
-        far:
-        home:
         near:
           rows:
             thumb:
+              column_net: P7
+        home:
+          rows:
+            thumb:
+              column_net: P8
+        far:
+          rows:
+            thumb:
               shift: [-8, -19]
+              column_net: P1
+      rows:
+        thumb:
+          row_net: P10
+          row_mark: LF
+      key:
+        footprints: *quad
+        mirror: *quad_mirror
   rotate: -25
   mirror:
     ref: matrix_inner_top
@@ -50,11 +107,11 @@ outlines:
           shift: [10, 10]
       bottom:
         left:
-          ref: thumbfan_near_thumb
+          ref: thumbfan_far_thumb
           relative: false
           shift: [10, 10]
         right:
-          ref: mirror_thumbfan_near_thumb
+          ref: mirror_thumbfan_far_thumb
           relative: false
           shift: [10, 10]
       waypoints:
@@ -87,3 +144,4 @@ pcbs:
             - matrix_inner_bottom
             - mirror_matrix_inner_bottom
           rotate: 270
+          shift: [0, -2]
