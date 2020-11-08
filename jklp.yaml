@@ -58,6 +58,11 @@ points:
             nets:
               from: '!colrow'
               to: '!column_net'
+          alps:
+            type: alps
+            nets:
+              from: '!colrow'
+              to: '!column_net'
           diode:
             type: diode
             anchor:
@@ -69,6 +74,10 @@ points:
         mirror:
           footprints: &quad_mirror
             mx:
+              nets:
+                from: '!column_net'
+                to: '!colrow'
+            alps:
               nets:
                 from: '!column_net'
                 to: '!colrow'
