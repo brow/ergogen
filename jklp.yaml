@@ -68,15 +68,21 @@ outlines:
         - percent: 82
           width: 35
   exports:
-    mockup:
-      plate_outline:
-        operation: add
-        type: keys
+    _pcb_outline:
+      - type: keys
         side: both
         size: [18, 18]
-      switch_holes:
-        operation: stack
+    mockup:
+      - operation: add
+        type: outline
+        name: _pcb_outline
+      - operation: stack
         type: keys
         side: both
         size: [18, 18]
         bound: false
+pcbs:
+  main:
+    outlines:
+      main:
+        outline: _pcb_outline
