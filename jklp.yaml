@@ -58,6 +58,14 @@ points:
             nets:
               from: '!colrow'
               to: '!column_net'
+          diode:
+            type: diode
+            anchor:
+              rotate: 90
+              shift: [8.25, 0]
+            nets:
+              from: '!colrow'
+              to: '!row_net'
         mirror:
           footprints: &quad_mirror
             mx:
