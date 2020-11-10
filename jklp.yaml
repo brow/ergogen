@@ -97,7 +97,7 @@ points:
         far:
           rows:
             thumb:
-              shift: [-8, -19]
+              shift: [-5, -19]
               column_net: P1
       rows:
         thumb:
