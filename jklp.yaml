@@ -78,6 +78,28 @@ points:
             row_mark: RT
     switch_footprints:
       extends: matrix
+      columns:
+        pinky:
+          rows:
+            home:
+              footprints:
+                diode:
+                  anchor:
+                    shift: [,2]
+        ring:
+          rows:
+            bottom:
+              footprints:
+                diode:
+                  anchor:
+                    shift: [,5]
+        middle:
+          rows:
+            top:
+              footprints:
+                diode:
+                  anchor:
+                    shift: [,-5]
       key:
         footprints: &quad
           mx:
@@ -128,6 +150,11 @@ points:
               bind: [4, 0, 0, 0]
               shift: [-5, -19]
               column_net: P1
+              footprints:
+                diode:
+                  anchor:
+                    rotate: 180
+                    shift: [0, 8.25]
       rows:
         thumb:
           row_net: P10
