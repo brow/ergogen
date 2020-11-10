@@ -151,16 +151,35 @@ outlines:
           shift: [0.5, 0.5]
       bottom:
         left:
-          ref: thumbfan_near_thumb
-          shift: [0.5, -0.5]
+          ref: thumbfan_far_thumb
+          shift: [0.5, 0.5]
         right:
-          ref: mirror_thumbfan_near_thumb
-          shift: [0.5, -0.5]
+          ref: mirror_thumbfan_far_thumb
+          shift: [0.5, 0.5]
   exports:
+    _more_glue:
+      - type: polygon
+        points:
+          - ref: matrix_inner_top
+            shift: [7.8, 7.8]
+          - ref: thumbfan_near_thumb
+            shift: [7.8, -7.8]
+          - ref: thumbfan_far_thumb
+            shift: [7.8, 11.2]
+          - ref: mirror_thumbfan_far_thumb
+            shift: [7.8, 11.2]
+          - ref: mirror_thumbfan_near_thumb
+            shift: [7.8, -7.8]
+          - ref: mirror_matrix_inner_top
+            shift: [7.8, 7.8]
     _pcb_edge:
-      - type: keys
+      - operation: add
+        type: keys
         side: both
         size: [15.6, 15.6] # MX switch dimensions
+      - operation: add
+        type: outline
+        name: _more_glue
     mockup:
       - operation: add
         type: outline
