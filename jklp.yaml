@@ -227,4 +227,4 @@ pcbs:
             - matrix_inner_bottom
             - mirror_matrix_inner_bottom
           rotate: 270
-          shift: [0, -2]
+          shift: [0, -22]
