@@ -11,7 +11,6 @@ points:
               bind: [0, 4, 4, 0]
           key:
             column_net: P4
-            column_mark: P
         ring:
           stagger: 22
           rows:
@@ -23,7 +22,6 @@ points:
               bind: [0, 0, 0, 4]
           key:
             column_net: P2
-            column_mark: R
         middle:
           stagger: 7
           rows:
@@ -35,7 +33,6 @@ points:
               bind: [0, 4, 0, 4]
           key:
             column_net: P7
-            column_mark: M
         index:
           stagger: -7
           rows:
@@ -45,7 +42,6 @@ points:
               bind: [0, 0, 4, 4]
           key:
             column_net: P8
-            column_mark: X
         inner:
           rows:
             top:
@@ -56,26 +52,19 @@ points:
               bind: [0, 0, 0, 4]
           key:
             column_net: P5
-            column_mark: I
       rows:
         bottom:
           row_net: P6
-          row_mark: LB
           mirror:
             row_net: P14
-            row_mark: RB
         home:
           row_net: P0
-          row_mark: LH
           mirror:
             row_net: P20
-            row_mark: RH
         top:
           row_net: P1
-          row_mark: LT
           mirror:
             row_net: P21
-            row_mark: RT
     switch_footprints:
       extends: matrix
       columns:
@@ -158,7 +147,6 @@ points:
       rows:
         thumb:
           row_net: P10
-          row_mark: LF
       key:
         footprints: *quad
         mirror: *quad_mirror
