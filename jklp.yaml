@@ -22,7 +22,7 @@ points:
             bottom:
               bind: [0, 0, 0, 4]
           key:
-            column_net: P5
+            column_net: P2
             column_mark: R
         middle:
           stagger: 7
@@ -55,26 +55,26 @@ points:
             bottom:
               bind: [0, 0, 0, 4]
           key:
-            column_net: P1
+            column_net: P5
             column_mark: I
       rows:
         bottom:
-          row_net: P16
+          row_net: P6
           row_mark: LB
           mirror:
-            row_net: P9
+            row_net: P14
             row_mark: RB
         home:
-          row_net: P15
+          row_net: P0
           row_mark: LH
           mirror:
-            row_net: P6
+            row_net: P20
             row_mark: RH
         top:
-          row_net: P20
+          row_net: P1
           row_mark: LT
           mirror:
-            row_net: P2
+            row_net: P21
             row_mark: RT
     switch_footprints:
       extends: matrix
@@ -149,7 +149,7 @@ points:
             thumb:
               bind: [4, 0, 0, 0]
               shift: [-5, -19]
-              column_net: P1
+              column_net: P5
               footprints:
                 diode:
                   anchor:
