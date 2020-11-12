@@ -5,10 +5,10 @@ points:
         pinky:
           rows:
             bottom:
-              bind: [0, 4, 0, 0]
+              bind: [0, 5, 0, 0]
               shift: [-19, 24]
             top:
-              bind: [0, 4, 4, 0]
+              bind: [0, 5, 5, 0]
           key:
             column_net: P0
             mirror:
@@ -17,11 +17,11 @@ points:
           stagger: 22
           rows:
             top:
-              bind: [0, 4, 4, 0]
+              bind: [0, 5, 5, 0]
             home:
-              bind: [0, 4, 4, 0]
+              bind: [0, 5, 5, 0]
             bottom:
-              bind: [0, 0, 0, 4]
+              bind: [0, 0, 0, 5]
           key:
             column_net: P3
             mirror:
@@ -30,11 +30,11 @@ points:
           stagger: 7
           rows:
             top:
-              bind: [0, 0, 4, 0]
+              bind: [0, 0, 5, 0]
             home:
-              bind: [0, 0, 4, 0]
+              bind: [0, 0, 5, 0]
             bottom:
-              bind: [0, 4, 0, 4]
+              bind: [0, 5, 0, 5]
           key:
             column_net: P4
             mirror:
@@ -43,9 +43,9 @@ points:
           stagger: -7
           rows:
             top:
-              bind: [0, 0, 4, 4]
+              bind: [0, 0, 5, 5]
             home:
-              bind: [0, 0, 4, 4]
+              bind: [0, 0, 5, 5]
           key:
             column_net: P5
             mirror:
@@ -53,11 +53,11 @@ points:
         inner:
           rows:
             top:
-              bind: [0, 0, 4, 4]
+              bind: [0, 0, 5, 5]
             home:
-              bind: [0, 0, 4, 4]
+              bind: [0, 0, 5, 5]
             bottom:
-              bind: [0, 0, 0, 4]
+              bind: [0, 0, 0, 5]
           key:
             column_net: P6
             mirror:
@@ -78,21 +78,31 @@ points:
               footprints:
                 diode:
                   anchor:
-                    shift: [,2]
+                    shift: [,3]
         ring:
           rows:
+            home:
+              footprints:
+                diode:
+                  anchor:
+                    shift: [,4]
             bottom:
               footprints:
                 diode:
                   anchor:
-                    shift: [,5]
+                    shift: [,7]
         middle:
           rows:
+            home:
+              footprints:
+                diode:
+                  anchor:
+                    shift: [,-4]
             top:
               footprints:
                 diode:
                   anchor:
-                    shift: [,-5]
+                    shift: [,-7]
       key:
         footprints: &quad
           mx:
@@ -131,7 +141,7 @@ points:
         near:
           rows:
             thumb:
-              bind: [4, 0, 0, 0]
+              bind: [5, 0, 0, 0]
               column_net: P4
               mirror:
                 column_net: P19
@@ -144,7 +154,7 @@ points:
         far:
           rows:
             thumb:
-              bind: [4, 0, 0, 0]
+              bind: [5, 0, 0, 0]
               shift: [-5, -19]
               column_net: P6
               mirror:
@@ -186,22 +196,22 @@ outlines:
       - type: polygon
         points:
           - ref: matrix_inner_top
-            shift: [7.8, 7.8]
+            shift: [7.1, 7.1]
           - ref: thumbfan_near_thumb
-            shift: [7.8, -7.8]
+            shift: [7.1, -7.1]
           - ref: thumbfan_far_thumb
-            shift: [7.8, 11.2]
+            shift: [7.1, 11.9]
           - ref: mirror_thumbfan_far_thumb
-            shift: [7.8, 11.2]
+            shift: [7.1, 11.9]
           - ref: mirror_thumbfan_near_thumb
-            shift: [7.8, -7.8]
+            shift: [7.1, -7.1]
           - ref: mirror_matrix_inner_top
-            shift: [7.8, 7.8]
+            shift: [7.1, 7.1]
     _pcb_edge:
       - operation: add
         type: keys
         side: both
-        size: [15.6, 15.6] # MX switch dimensions
+        size: [14.4, 14.4] # MX switch dimensions
       - operation: add
         type: outline
         name: _more_glue
@@ -212,7 +222,7 @@ outlines:
       - operation: stack
         type: keys
         side: both
-        size: [15.6, 15.6] # MX switch dimensions
+        size: [14.4, 14.4] # MX switch dimensions
         bound: false
 pcbs:
   main:
