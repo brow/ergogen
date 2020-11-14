@@ -175,7 +175,8 @@ points:
   rotate: -25
   mirror:
     ref: matrix_inner_top
-    distance: 30
+    shift: [7.1, 7.1]
+    distance: 11 # Just enough for mini-USB-to-USB-C adapater to pass
 outlines:
   glue:
     default:
