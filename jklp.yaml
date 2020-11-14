@@ -110,6 +110,13 @@ points:
                 diode:
                   anchor:
                     shift: [,-7]
+        inner:
+          rows:
+            top:
+              footprints:
+                diode:
+                  anchor:
+                    shift: [,-4]
       key:
         footprints: &quad
           mx:
@@ -195,6 +202,12 @@ outlines:
           ref: mirror_thumbfan_far_thumb
           shift: [0.5, 0.5]
   exports:
+    _notch:
+      - type: rectangle
+        ref: matrix_inner_top
+        shift: [7.1, 7.1]
+        rotate: -65
+        size: [22, 11]
     _more_glue:
       - type: polygon
         points:
@@ -210,6 +223,8 @@ outlines:
             shift: [7.1, -7.1]
           - ref: mirror_matrix_inner_top
             shift: [7.1, 7.1]
+          - ref: mirror_matrix_inner_top
+            shift: [8, 7.1]
     _pcb_edge:
       - operation: add
         type: keys
@@ -218,6 +233,9 @@ outlines:
       - operation: add
         type: outline
         name: _more_glue
+      - operation: subtract
+        type: outline
+        name: _notch
     mockup:
       - operation: add
         type: outline
