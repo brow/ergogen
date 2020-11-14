@@ -12,7 +12,7 @@ points:
           key:
             column_net: P0
             mirror:
-              column_net: P21
+              column_net: P1
         ring:
           stagger: 22
           rows:
@@ -23,9 +23,9 @@ points:
             bottom:
               bind: [0, 0, 0, 5]
           key:
-            column_net: P3
+            column_net: P2
             mirror:
-              column_net: P20
+              column_net: P3
         middle:
           stagger: 7
           rows:
@@ -38,7 +38,7 @@ points:
           key:
             column_net: P4
             mirror:
-              column_net: P19
+              column_net: P5
         index:
           stagger: -7
           rows:
@@ -47,9 +47,9 @@ points:
             home:
               bind: [0, 0, 5, 5]
           key:
-            column_net: P5
+            column_net: P6
             mirror:
-              column_net: P18
+              column_net: P7
         inner:
           rows:
             top:
@@ -59,16 +59,16 @@ points:
             bottom:
               bind: [0, 0, 0, 5]
           key:
-            column_net: P6
+            column_net: P8
             mirror:
-              column_net: P15
+              column_net: P9
       rows:
         bottom:
-          row_net: P7
+          row_net: P21
         home:
-          row_net: P2
+          row_net: P20
         top:
-          row_net: P1
+          row_net: P19
     switch_footprints:
       extends: matrix
       columns:
@@ -144,21 +144,21 @@ points:
               bind: [5, 0, 0, 0]
               column_net: P4
               mirror:
-                column_net: P19
+                column_net: P5
         home:
           rows:
             thumb:
-              column_net: P5
+              column_net: P6
               mirror:
-                column_net: P18
+                column_net: P7
         far:
           rows:
             thumb:
               bind: [5, 0, 0, 0]
               shift: [-5, -19]
-              column_net: P6
+              column_net: P8
               mirror:
-                column_net: P15
+                column_net: P9
               footprints:
                 diode:
                   anchor:
@@ -166,7 +166,7 @@ points:
                     shift: [0, 8.25]
       rows:
         thumb:
-          row_net: P8
+          row_net: P18
       key:
         footprints: *quad
         mirror: *quad_mirror
