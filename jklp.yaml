@@ -187,7 +187,7 @@ points:
   rotate: -25
   mirror:
     ref: matrix_inner_top
-    shift: [7.1, 7.1]
+    shift: [7.2, 7.2]
     distance: 11 # Just enough for mini-USB-to-USB-C adapater to pass
 outlines:
   glue:
@@ -210,26 +210,24 @@ outlines:
     _notch:
       - type: rectangle
         ref: matrix_inner_top
-        shift: [7.1, 7.1]
+        shift: [7.2, 7.2]
         rotate: -65
         size: [22, 11]
     _more_glue:
       - type: polygon
         points:
           - ref: matrix_inner_top
-            shift: [7.1, 7.1]
+            shift: [7.2, 7.2]
           - ref: thumbfan_near_thumb
-            shift: [7.1, -7.1]
+            shift: [7.2, -7.2]
           - ref: thumbfan_far_thumb
-            shift: [7.1, 11.9]
+            shift: [7.2, 11.8]
           - ref: mirror_thumbfan_far_thumb
-            shift: [7.1, 11.9]
+            shift: [7.2, 11.8]
           - ref: mirror_thumbfan_near_thumb
-            shift: [7.1, -7.1]
+            shift: [7.2, -7.2]
           - ref: mirror_matrix_inner_top
-            shift: [7.1, 7.1]
-          - ref: mirror_matrix_inner_top
-            shift: [8, 7.1]
+            shift: [7.2, 7.2]
     _pcb_edge:
       - operation: add
         type: keys
