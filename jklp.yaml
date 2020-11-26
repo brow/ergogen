@@ -169,6 +169,8 @@ points:
       rows:
         thumb:
           row_net: P10
+          mirror:
+            row_net: P19
       key:
         footprints: *quad
         mirror: *quad_mirror
